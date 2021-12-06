@@ -1,128 +1,181 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-link{
-    color: #240D75;
-    margin-left: 1em;
-    font-size: large;
-    font-weight: 700;
-    text-align: center;
+.nav-link {
+  color: #240d75;
+  margin-left: 1em;
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
 }
-
 
 .hero-banner h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
-.hero-img{
-    animation: moveFromTop 1s ease-in-out;
+.hero-img {
+  animation: moveFromTop 1s ease-in-out;
 }
 
 @keyframes moveFromTop {
-    0% {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 footer {
-    background: #EC652D;
-    color: #fff;
-    font-size: 14px;
+  background: #ec652d;
+  color: #fff;
+  font-size: 14px;
 }
 footer .footer-top {
-    background: #240D75;
-    padding: 40px 0px 20px;
-    
+  background: #240d75;
+  padding: 40px 0px 20px;
 }
 
 footer .social-links a {
-    font-size: 17px;
-    display: inline-block;
-    background: #240D75;
-    color: rgb(255, 255, 255);
-    line-height: 1;
-    padding: 9px 0;
-    margin-right: 5px;
-    border-radius: 100%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.4s;
-
+  font-size: 17px;
+  display: inline-block;
+  background: #240d75;
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  padding: 9px 0;
+  margin-right: 5px;
+  border-radius: 100%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.4s;
 }
 footer .social-links a:hover {
-    background: #EC652D;
-    color: 240D75;
+  background: #ec652d;
+  transition: 0.2s all ease-in-out;
+  color: 240d75;
 }
 .footer-bottom {
-    padding: 20px 0px;
+  padding: 20px 0px;
 }
 
+.team-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.team-section .card {
+  width: 330px;
+  height: 400px;
+  padding: 60px 30px;
+  margin: 20px;
+  background: #f8f9fa;
 
+  border-radius: 20px;
+}
+.team-section .card:hover {
+  transition: 0.5s all ease-in-out;
+  padding: 70px 40px;
+}
 
-.team-section
-{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
+.team-section .card .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.team-section .card
-{
-   width: 330px;
-   height: 400px;
-   padding: 60px 30px;
-   margin: 20px;
-   background: #F8F9FA;
+.team-section .card .content .imgBx {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.team-section .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-section .card .content .contentBx h4 {
+  color: #240d75;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.team-section .card .content .contentBx h5 {
+  color: #6c758f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
 
-   border-radius: 20px;
+form {
+  max-width: 420px;
+  margin: 50px auto;
 }
-.team-section .card .content
-{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+
+.feedback-input {
+  color: 240d75;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 450;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: white;
+  border: 2px solid #ec652d;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
 }
-.team-section .card .content .imgBx
-{
-   width: 180px;
-   height: 180px;
-   border-radius: 50%;
-   position: relative;
-   margin-bottom: 20px;
-   overflow: hidden;
+
+.feedback-input:focus {
+  border: 2px solid rgb(255, 94, 0);
 }
-.team-section .card .content .imgBx img
-{
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
 }
-.team-section .card .content .contentBx h4
-{
-   color: #240D75;
-   font-size: 1.7rem;
-   font-weight: bold;
-   text-align: center;
-   letter-spacing: 1px;
+
+[type="submit"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  background: #ec652d;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 500;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
-.team-section .card .content .contentBx h5
-{
-   color: #6c758f;
-   font-size: 1.2rem;
-   font-weight: bold;
-   text-align: center;
+[type="submit"]:hover {
+  background: rgb(255, 94, 0);
+}
+[type="submit"]:active {
+  background: #15c39a;
+  transition: 0s;
 }

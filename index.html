@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Connect</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="icon" type="image/x-icon" href="imgs/fav_icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<link rel="stylesheet" href="css/style.css" />
+    <title>Connect</title>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+    <link rel="icon" type="image/x-icon" href="imgs/fav_icon.png">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+
+
+
+</head>
 
 <body>
     <!-- Nav -->
@@ -21,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
             <a class="navbar-brand">
-                <img src="imgs/logo.svg"  height="70" alt="" />
+                <img src="imgs/logo.svg" height="70" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +43,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact-us">Contact us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#About-section">About us</a>
@@ -147,8 +159,33 @@
                 </div>
             </div>
         </div>
+
     </section>
     <!-- Team -->
+
+
+    <!-- contact -->
+
+    <section class="contact-form bg-light py-5" id="Contact-us">
+        <div class="container">
+            <h1 class="mt-3 text-center" style="color:#240D75;">Get in touch</h1>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="imgs/5964.jpg" class="img-fluid " alt="" />
+                </div>
+                <form class="col-lg-6" id="submit-form" action="">
+                    <div id="form_alerts"></div>
+                    <input name="name" type="text" class="feedback-input" placeholder="Name" required />
+                    <input name="email" type="email" class="feedback-input" placeholder="Email" required />
+                    <textarea name="message" class="feedback-input" placeholder="Message" required></textarea>
+                    <input type="submit" value="SEND" />
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- contact -->
 
 
     <!-- footer  -->
@@ -156,7 +193,6 @@
     <footer>
         <div class="footer-top">
             <div class="container">
-
                 <div class="social-links mt-1 text-center">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -173,8 +209,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p class="text-center mb-2 text-white">&copy; Copyright <strong>EMEA</strong>. All Rights Reserved</p>
-
+                        <p class="text-center mb-2 text-white">&copy; Copyright <strong>Connect</strong>. All Rights
+                            Reserved</p>
                     </div>
                 </div>
             </div>
@@ -183,15 +219,37 @@
 
     <!-- footer  -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbyGmtDMLVuc4LWMzJya4vAFx1eth0lkuQHGYwfg7IflY1LvK5hh/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
+                    $("#form_alerts").html("<div class='alert alert-success'>Message sent successfully. <i class='far fa-smile-beam'></i></div>")
+                },
+                error: function (err) {
+                    $("#form_alerts").html("<div class='alert alert-danger'>Message falied to send. <i class='far fa-sad-tear'></i></div>")
+
+                }
+            })
+        })
+    </script>
+
 </body>
 
 </html>
