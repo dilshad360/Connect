@@ -174,24 +174,26 @@ textarea {
   width: 100%;
   background: #ec652d;
   border-radius: 5px;
-  border: 0;
+  border: 2px solid #ec652d;
   cursor: pointer;
   color: white;
   font-size: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   margin-top: -4px;
   font-weight: 500;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 [type="submit"]:hover {
-  background: rgb(255, 94, 0);
+  color: #ec652d;
+  background: white;
+
 }
 [type="submit"]:active {
-  background: #15c39a;
-  transition: 0s;
+  transform: translateY(4px);
+  transition: 0s ease-in-out;
 }
 .card{
   padding: 15px;
